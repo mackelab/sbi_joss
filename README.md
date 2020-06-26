@@ -1,6 +1,6 @@
 # SBI JOSS paper
 
-## Previews
+## PDF Preview
 
 The paper can be compiled at https://whedon.theoj.org, providing the repository link:
 ```
