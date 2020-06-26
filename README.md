@@ -1,5 +1,6 @@
 # SBI JOSS paper
 
+
 ## PDF Preview
 
 The paper can be compiled at https://whedon.theoj.org, providing the repository link:
@@ -92,3 +93,5 @@ for n in range(10):
 
 
 ## Conversion to TeX
+
+Some solutions are suggested here: https://github.com/openjournals/joss/issues/132
