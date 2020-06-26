@@ -1,11 +1,10 @@
 ---
-title: 'Example paper'
+title: 'sbi: a toolkit for simulation-based inference'
 tags:
+  - simulation-based inference
+  - likelihood-free inference
   - Python
-  - astronomy
-  - dynamics
-  - galactic dynamics
-  - milky way
+  - PyTorch
 authors:
   - name: Author With Footnote^[Custom footnotes for e.g. denoting who the corresponding author is can be included like this.]
     orcid: 0000-0003-0872-7098
