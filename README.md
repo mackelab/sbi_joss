@@ -1,6 +1,8 @@
 # SBI JOSS paper
 
-## Preview
+## Previews
 
-The paper can be previewed here, by providing the link to this repository:
-https://whedon.theoj.org
+The paper can be previewed athttps://whedon.theoj.org, providing the repository link:
+```
+https://github.com/mackelab/sbi_joss.git
+```
