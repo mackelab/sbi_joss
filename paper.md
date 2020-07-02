@@ -88,8 +88,10 @@ With `sbi`, we aim to support scientific discovery by making Bayesian inference 
 
 # Acknowledgements
 
-This work has been supported by the German Federal Ministry of Education and Research (BMBF, project `ADIMEM', FKZ 01IS18052 A-D), the German Research Foundation (DFG) through  SFB~1089 `Synaptic Microcircuits', SPP 2041 `Computational Connectomics' and Germany’s Excellence Strategy – EXC-Number 2064/1 – Project number 390727645.
+This work has been supported by the German Federal Ministry of Education and Research (BMBF, project `ADIMEM', FKZ 01IS18052 A-D), the German Research Foundation (DFG) through  SFB 1089 `Synaptic Microcircuits', SPP 2041 `Computational Connectomics' and Germany’s Excellence Strategy – EXC-Number 2064/1 – Project number 390727645.
 
 Conor Durkan was supported by the EPSRC Centre for Doctoral Training in Data Science, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016427/1) and the University of Edinburgh.
 
 We are grateful to Artur Bekasov, George Papamakarios and Iain Murray for making available `nflows` [@nflows-repo], a package for normalizing flows-based density estimation which `sbi` leverages extensively.
+
+# References
