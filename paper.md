@@ -59,3 +59,36 @@ We present `sbi`, a PyTorch-based package that implements SBI algorithms based o
 
 # Motivation
 Bayesian inference is a principled approach for determining parameters consistent with empirical observations: Given a prior over parameters, a stochastic simulator, and observations, it returns a posterior distribution. In cases where the simulator reduces to a tractable probability density, many methods for approximate Bayesian inference exist [e.g.,@metropolis1953, @neal2003, @VI-papers, @le2016, @baydin2020]. For a more general simulator, however, the likelihood of parameters given data cannot be evaluated. In this 'likelihood-free' setting [@cranmer2019], traditional algorithms are based on Monte-Carlo rejection [@pritchard1999, @sisson2007], an approach referred to as _Approximate Bayesian Computation_ (ABC). More recently, novel algorithms based on neural networks have been developed [@papamakarios2016, @lueckmann2017, @papamakarios2019a, @greenberg2019] that do not reject simulations but train deep neural density estimators or classifiers for interpolation. To support these scenarios, it is desirable to be able to (re-)use sophisticated neural architectures, in particular modern flow-based density estimators [@papamakarios2019c]. For this reason `sbi` closely integrates with PyTorch and offers state-of-the-art neural network-based SBI algorithms [@papamakarios2019a, @hermans2019, @greenberg2019] with flexible choice of network architectures. With `sbi`, researchers can easily implement new neural inference methods, benefiting from the infrastructure to manage simulators and a capable posterior representation. In turn, users can profit from a unified inference interface that still allows them to use their own custom neural network or choose from a growing library of preconfigured options provided with the package.
+
+## Related Software and use in research
+
+There are several mature packages that implement SBI algorithms. `elfi` [@elfi2018] is a package offering BOLFI, a Gaussian process-based algorithm [@gutmann2015], and some classical ABC algorithms. The package `carl` [@louppe2016] implements the method described in @cranmer2015carl. Two other SBI packages, currently under development, are `hypothesis` [@hypothesis-repo] and `pydelfi` [@pydelfi-repo].
+
+`sbi` is closely integrated with PyTorch [@paszke2019] and uses @nflows-repo for flow-based density estimators. `sbi` builds on experience accumulated developing `delfi` [@delfi-repo], which it replaces. `delfi` was based on `theano` [@theano] (development discontinued) and was developed both for SBI research [@greenberg2019; @lueckmann2017] and for scientific applications [@goncalves2019]. The `sbi` codebase started as a fork of `lfi` [@lfi-repo], which was developed for [@durkan2020]. `sbi` is currently under active use both as a platform for benchmarking SBI methods as well as in diverse applications in neuroscience.
+
+# Description 
+
+`sbi` currently implements three families of neural inference algorithms, each with advantageous computational properties for different simulation problems:
+* Sequential Neural _Posterior_ Estimation [@greenberg2019] trains a neural density estimator that directly estimates the posterior distribution,
+* Sequential Neural _Likelihood_ Estimation [@papamakarios2019a] trains a deep neural density estimator of the likelihood, which then allows to sample from the posterior using e.g. MCMC,
+* Sequential Neural _Ratio_ Estimation [@hermans2019; @durkan2020] trains a classifier to approximate density ratios, which in turn can be used to sample from the posterior e.g. with MCMC. 
+
+The inference step returns a `NeuralPosterior` object that represents the uncertainty about the parameters conditional on an observation, i.e. the posterior distribution. This object can be sampled from -- and if the chosen algorithm allows, evaluated with -- the same API as a regular PyTorch probability distribution [@paszke2019].
+
+An important challenge in making SBI algorithms usable by a broader community is to deal with diverse, often pre-existing, complex simulators. `sbi` works with any simulator as long as it can be wrapped in a Python callable. Furthermore, `sbi` ensures that custom simulators work well with neural networks, e.g. by performing automatic shape inference, standardizing inputs or handling failed simulations. To maximize simulator performance, `sbi` leverages vectorization where available and optionally parallelizes simulations using joblib [@joblib]. Moreover, if dimensionality reduction of the simulator output is desired, `sbi` can use a trainable summarizing network to extract relevant features from raw simulator output, rather than the user having to hand-design these features.
+
+In addition to the full-featured interface, `sbi` provides also a _simple_ interface which consists of a single function call with reasonable defaults. This allows new users to get familiarized with simulation-based inference and obtain quick results without having to define custom networks or tune hyperparameters.
+
+% CLOSING PARAGRAPH VERSION 1
+We have developed `sbi` with the long-term perspective of helping scientists assess complex hypotheses about the world formulated as parameterized stochastic simulators. First, by leveraging neural methods, we aim at making SBI applicable to simulators of increasing complexity. Second, by designing a flexible architecture and adopting community-oriented development practices, we are inviting machine-learning researchers to participate of this vision and contribute their methods for real-world applications and testing.
+
+% CLOSING PARAGRAPH VERSION 2 % MD: +1 for this version. +1 JB.
+With `sbi`, we aim to support scientific discovery by making Bayesian inference applicable to the widest class of models (simulators without a likelihood), and practical for complex problems (via neural inference). We have designed an open architecture and adopted community development practices in order to invite other machine-learning researchers to join us up in this long-term vision.
+
+# Acknowledgements
+
+This work has been supported by the German Federal Ministry of Education and Research (BMBF, project `ADIMEM', FKZ 01IS18052 A-D), the German Research Foundation (DFG) through  SFB~1089 `Synaptic Microcircuits', SPP~2041 `Computational Connectomics' and Germany’s Excellence Strategy – EXC-Number 2064/1 – Project number 390727645.
+
+Conor Durkan was supported by the EPSRC Centre for Doctoral Training in Data Science, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016427/1) and the University of Edinburgh.
+
+We are grateful to Artur Bekasov, George Papamakarios and Iain Murray for making available nflows [@nflows-github], a package for normalizing flows-based density estimation which `sbi` leverages extensively.
