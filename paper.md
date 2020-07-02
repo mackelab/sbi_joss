@@ -1,4 +1,3 @@
-## Metadata (remove this heading, YAML metadata not rendered properly in Overleaf)
 ---
 title: 'sbi - a toolkit for simulation-based inference'
 tags:
