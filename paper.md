@@ -50,7 +50,6 @@ affiliations:
 date: 23 June 2020.
 bibliography: paper.bib
 ---
-Word limit: 1000 (in the PDF).
 
 # Summary
 Scientists and engineers use numerical simulators to model empirically observed phenomena. In contrast to purely statistical models, simulators employ domain-relevant, interpretable parameters. These parameters, not all of which are known or directly measurable, are combined by the simulator with an internal source of randomness to produce its outputs.
@@ -58,3 +57,5 @@ If the parameters are well tuned, outputs will be consistent with empirical obse
 
 We present `sbi`, a PyTorch-based package that implements SBI algorithms based on neural networks. `sbi` facilitates inference on black-box simulators for practising scientists by providing a unified interface to state-of-the-art methods together with documentation and tutorials.
 
+# Motivation
+Bayesian inference is a principled approach for determining parameters consistent with empirical observations: Given a prior over parameters, a stochastic simulator, and observations, it returns a posterior distribution. In cases where the simulator reduces to a tractable probability density, many methods for approximate Bayesian inference exist [e.g.,@metropolis1953, @neal2003, @VI-papers, @le2016, @baydin2020]. For a more general simulator, however, the likelihood of parameters given data cannot be evaluated. In this 'likelihood-free' setting [@cranmer2019], traditional algorithms are based on Monte-Carlo rejection [@pritchard1999, @sisson2007], an approach referred to as _Approximate Bayesian Computation_ (ABC). More recently, novel algorithms based on neural networks have been developed [@papamakarios2016, @lueckmann2017, @papamakarios2019a, @greenberg2019] that do not reject simulations but train deep neural density estimators or classifiers for interpolation. To support these scenarios, it is desirable to be able to (re-)use sophisticated neural architectures, in particular modern flow-based density estimators [@papamakarios2019c]. For this reason `sbi` closely integrates with PyTorch and offers state-of-the-art neural network-based SBI algorithms [@papamakarios2019a, @hermans2019, @greenberg2019] with flexible choice of network architectures. With `sbi`, researchers can easily implement new neural inference methods, benefiting from the infrastructure to manage simulators and a capable posterior representation. In turn, users can profit from a unified inference interface that still allows them to use their own custom neural network or choose from a growing library of preconfigured options provided with the package.
