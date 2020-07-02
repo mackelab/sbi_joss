@@ -66,13 +66,16 @@ Bayesian inference is a principled approach for determining parameters consisten
 
 There are several mature packages that implement SBI algorithms. `elfi` [@elfi2018] is a package offering BOLFI, a Gaussian process-based algorithm [@gutmann2015], and some classical ABC algorithms. The package `carl` [@louppe2016] implements the method described in @cranmer2015carl. Two other SBI packages, currently under development, are `hypothesis` [@hypothesis-repo] and `pydelfi` [@pydelfi-repo].
 
-`sbi` is closely integrated with PyTorch [@paszke2019] and uses @nflows-repo for flow-based density estimators. `sbi` builds on experience accumulated developing `delfi` [@delfi-repo], which it replaces. `delfi` was based on `theano` [@theano] (development discontinued) and was developed both for SBI research [@greenberg2019; @lueckmann2017] and for scientific applications [@goncalves2019]. The `sbi` codebase started as a fork of `lfi` [@lfi-repo], which was developed for [@durkan2020]. `sbi` is currently under active use both as a platform for benchmarking SBI methods as well as in diverse applications in neuroscience.
+`sbi` is closely integrated with PyTorch [@paszke2019] and uses `nflows` [@nflows-repo] for flow-based density estimators. `sbi` builds on experience accumulated developing `delfi` [@delfi-repo], which it replaces. `delfi` was based on `theano` [@theano] (development discontinued) and was developed both for SBI research [@greenberg2019; @lueckmann2017] and for scientific applications [@goncalves2019]. The `sbi` codebase started as a fork of `lfi` [@lfi-repo], which was developed for [@durkan2020]. `sbi` is currently under active use both as a platform for benchmarking SBI methods as well as in diverse applications in neuroscience.
 
 # Description 
 
 `sbi` currently implements three families of neural inference algorithms, each with advantageous computational properties for different simulation problems:
+
 * Sequential Neural _Posterior_ Estimation [@greenberg2019] trains a neural density estimator that directly estimates the posterior distribution,
+
 * Sequential Neural _Likelihood_ Estimation [@papamakarios2019a] trains a deep neural density estimator of the likelihood, which then allows to sample from the posterior using e.g. MCMC,
+
 * Sequential Neural _Ratio_ Estimation [@hermans2019; @durkan2020] trains a classifier to approximate density ratios, which in turn can be used to sample from the posterior e.g. with MCMC. 
 
 The inference step returns a `NeuralPosterior` object that represents the uncertainty about the parameters conditional on an observation, i.e. the posterior distribution. This object can be sampled from -- and if the chosen algorithm allows, evaluated with -- the same API as a regular PyTorch probability distribution [@paszke2019].
