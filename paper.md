@@ -26,10 +26,8 @@ authors:
    orcid: 0000-0002-6987-4836
    affiliation: "1, 4"
  - name: David S. Greenberg
-   orcid: ??? ???? ???? ???
    affiliation: "1, 5"
  - name: Marcel Nonnenmacher
-   orcid: ??? ???? ???? ???
    affiliation: "1, 5"
  - name: Jakob H. Macke
    orcid: 0000-0001-5154-8912
@@ -45,10 +43,17 @@ affiliations:
    index: 3
  - name: Max Planck Research Group Neural Systems Analysis, Center of Advanced European Studies and Research (caesar) 
    index: 4
- - name: HZG ????
+ - name: HZG
  - name: Max Planck Institute for Intelligent Systems, Tübingen
 index: 5
 date: 23 June 2020.
 bibliography: paper.bib
 ---
 Word limit: 1000 (in the PDF).
+
+# Summary
+Scientists and engineers use numerical simulators to model empirically observed phenomena. In contrast to purely statistical models, simulators employ domain-relevant, interpretable parameters. These parameters, not all of which are known or directly measurable, are combined by the simulator with an internal source of randomness to produce its outputs.
+If the parameters are well tuned, outputs will be consistent with empirical observations. Simulation-based inference (SBI) is a systematic procedure to infer the unknown parameters of the simulator so that they a) match empirical observations and b) are compatible with prior knowledge. In Bayesian terms, SBI infers a posterior distribution over the parameters of interest from a prior distribution even when an explicit likelihood is unavailable, which is frequently the case for complex simulators. The Bayesian posterior can place probability on diverse parameter combinations that may all explain a given observation, and naturally quantifies the uncertainty about them.
+
+We present `sbi`, a PyTorch-based package that implements SBI algorithms based on neural networks. `sbi` facilitates inference on black-box simulators for practising scientists by providing a unified interface to state-of-the-art methods together with documentation and tutorials.
+
