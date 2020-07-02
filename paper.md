@@ -1,62 +1,55 @@
+## Metadata (remove this heading, YAML metadata not rendered properly in Overleaf)
 ---
-title: 'sbi: a toolkit for simulation-based inference'
+title: 'sbi - a toolkit for simulation-based inference'
 tags:
-  - simulation-based inference
+  - simulation science
   - likelihood-free inference
-  - Python
-  - PyTorch
-authors:
-  - name: Author With Footnote^[Custom footnotes for e.g. denoting who the corresponding author is can be included like this.]
-    orcid: 0000-0003-0872-7098
-    affiliation: "1, 2"
-  - name: Author Without ORCID
-    affiliation: 2
+  - bayesian inference
+  - system identification
+  - parameter identification
+authors: 
+ - name: Alvaro Tejero-Cantero
+   orcid: 0000-0002-8768-4227
+   affiliation: "0, 1"
+ - name: Jan Boelts
+   orcid: 0000-0003-4979-7092
+   affiliation: "0, 1"
+ - name: Michael Deistler
+   orcid: 0000-0002-3573-0404
+   affiliation: "0, 1"
+ - name: Jan-Matthis Lueckmann
+   orcid: 0000-0003-4320-4663
+   affiliation: "0, 1"
+ - name: Conor Durkan
+   orcid: 0000-0001-9333-7777
+   affiliation: "0, 3"
+ - name: Pedro J. Gonçalves
+   orcid: 0000-0002-6987-4836
+   affiliation: "1, 4"
+ - name: David S. Greenberg
+   orcid: ??? ???? ???? ???
+   affiliation: "1, 5"
+ - name: Marcel Nonnenmacher
+   orcid: ??? ???? ???? ???
+   affiliation: "1, 5"
+ - name: Jakob H. Macke
+   orcid: 0000-0001-5154-8912
+   affiliation: "1, 2, 5"
 affiliations:
- - name: Institution 1
+ - name: Equally contributing authors
+   index: 0
+ - name: Computational Neuroengineering, Department of Electrical and Computer Engineering, Technical University of Munich
    index: 1
- - name: Institution 2
+ - name: University of Tübingen
    index: 2
-date: 26 June 2020
+ - name: School of Informatics, University of Edinburgh
+   index: 3
+ - name: Max Planck Research Group Neural Systems Analysis, Center of Advanced European Studies and Research (caesar) 
+   index: 4
+ - name: HZG ????
+ - name: Max Planck Institute for Intelligent Systems, Tübingen
+index: 5
+date: 23 June 2020.
 bibliography: paper.bib
 ---
-
-# Summary
-
-The forces on stars, galaxies, and dark matter under external gravitational
-fields lead to the dynamical evolution of structures in the universe. The orbits
-of these bodies are therefore key to understanding the formation, history, and
-future state of galaxies. The field of "galactic dynamics," which aims to model
-the gravitating components of galaxies to study their structure and evolution,
-is now well-established, commonly taught, and frequently used in astronomy.
-Aside from toy problems and demonstrations, the majority of problems require
-efficient numerical tools, many of which require the same base code (e.g., for
-performing numerical orbit integration).
-
-
-`Gala` is an Astropy-affiliated Python package for galactic dynamics. Python
-enables wrapping low-level languages (e.g., C) for speed without losing
-flexibility or ease-of-use in the user-interface. The API for `Gala` was
-designed to provide a class-based and user-friendly interface to fast (C or
-Cython-optimized) implementations of common operations such as gravitational
-potential and force evaluation, orbit integration, dynamical transformations,
-and chaos indicators for nonlinear dynamics. `Gala` also relies heavily on and
-interfaces well with the implementations of physical units and astronomical
-coordinate systems in the `Astropy` package [@astropy] (`astropy.units` and
-`astropy.coordinates`).
-
-`Gala` was designed to be used by both astronomical researchers and by
-students in courses on gravitational dynamics or astronomy. It has already been
-used in a number of scientific publications [@Pearson:2017] and has also been
-used in graduate courses on Galactic dynamics to, e.g., provide interactive
-visualizations of textbook material [@Binney:2008]. The combination of speed,
-design, and support for Astropy functionality in `Gala` will enable exciting
-scientific explorations of forthcoming data releases from the *Gaia* mission
-[@gaia] by students and experts alike.
-
-
-# Acknowledgements
-
-We acknowledge ...
-
-
-# References
+Word limit: 1000 (in the PDF).
