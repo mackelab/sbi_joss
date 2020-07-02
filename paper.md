@@ -31,7 +31,7 @@ authors:
    affiliation: "1, 5"
  - name: Jakob H. Macke
    orcid: 0000-0001-5154-8912
-   affiliation: "1, 2, 5"
+   affiliation: "1, 2, 6"
 affiliations:
  - name: Equally contributing authors
    index: 0
@@ -44,8 +44,9 @@ affiliations:
  - name: Max Planck Research Group Neural Systems Analysis, Center of Advanced European Studies and Research (caesar) 
    index: 4
  - name: HZG
+   index: 5
  - name: Max Planck Institute for Intelligent Systems, Tübingen
-index: 5
+   index: 6
 date: 23 June 2020.
 bibliography: paper.bib
 ---
