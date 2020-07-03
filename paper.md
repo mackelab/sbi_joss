@@ -53,7 +53,7 @@ bibliography: paper.bib
 
 # Summary
 
-Scientists and engineers use numerical simulators to model empirically observed phenomena. In contrast to purely statistical models, simulators employ domain-relevant, interpretable parameters. These parameters, not all of which are known or directly measurable, are combined by the simulator with an internal source of randomness to produce its outputs.
+Scientists and engineers employ numerical simulators to model empirically observed phenomena. In contrast to purely statistical models, simulators use domain-relevant, interpretable parameters. These parameters, not all of which are known or directly measurable, are combined by the simulator with an internal source of randomness to produce its outputs.
 If the parameters are well tuned, outputs will be consistent with empirical observations. Simulation-based inference (SBI) is a systematic procedure to infer the unknown parameters of the simulator so that they a) match empirical observations and b) are compatible with prior knowledge. In Bayesian terms, SBI infers a posterior distribution over the parameters of interest from a prior distribution even when an explicit likelihood is unavailable, which is frequently the case for complex simulators. The Bayesian posterior can place probability on diverse parameter combinations that may all explain a given observation, and naturally quantifies the uncertainty about them.
 
 We present `sbi`, a PyTorch-based package that implements SBI algorithms based on neural networks. `sbi` facilitates inference on black-box simulators for practising scientists by providing a unified interface to state-of-the-art methods together with documentation and tutorials.
@@ -84,11 +84,11 @@ An important challenge in making SBI algorithms usable by a broader community is
 
 In addition to the full-featured interface, `sbi` provides also a _simple_ interface which consists of a single function call with reasonable defaults. This allows new users to get familiarized with simulation-based inference and obtain quick results without having to define custom networks or tune hyperparameters.
 
-With `sbi`, we aim to support scientific discovery by making Bayesian inference applicable to the widest class of models (simulators without a likelihood), and practical for complex problems (via neural inference). We have designed an open architecture and adopted community development practices in order to invite other machine-learning researchers to join us up in this long-term vision.
+With `sbi`, we aim to support scientific discovery by making Bayesian inference applicable to the widest class of models (simulators without a likelihood), and practical for complex problems (via neural inference). We have designed an open architecture and adopted community-oriented development practices in order to invite other machine-learning researchers to join us in this long-term vision.
 
 # Acknowledgements
 
-This work has been supported by the German Federal Ministry of Education and Research (BMBF, project `ADIMEM', FKZ 01IS18052 A-D), the German Research Foundation (DFG) through  SFB 1089 `Synaptic Microcircuits', SPP 2041 `Computational Connectomics' and Germany’s Excellence Strategy – EXC-Number 2064/1 – Project number 390727645.
+This work has been supported by the German Federal Ministry of Education and Research (BMBF, project \`ADIMEM', FKZ 01IS18052 A-D), the German Research Foundation (DFG) through  SFB 1089 \`Synaptic Microcircuits', SPP 2041 `Computational Connectomics' and Germany’s Excellence Strategy – EXC-Number 2064/1 – Project number 390727645.
 
 Conor Durkan was supported by the EPSRC Centre for Doctoral Training in Data Science, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016427/1) and the University of Edinburgh.
 
