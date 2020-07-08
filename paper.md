@@ -9,40 +9,40 @@ tags:
 authors: 
  - name: Alvaro Tejero-Cantero
    orcid: 0000-0002-8768-4227
-   affiliation: "e, 1"
+   affiliation: "0, 1"
  - name: Jan Boelts
    orcid: 0000-0003-4979-7092
-   affiliation: "e, 1"
+   affiliation: "0, 1"
  - name: Michael Deistler
    orcid: 0000-0002-3573-0404
-   affiliation: "e, 1"
+   affiliation: "0, 1"
  - name: Jan-Matthis Lueckmann
    orcid: 0000-0003-4320-4663
-   affiliation: "e, 1"
+   affiliation: "0, 1"
  - name: Conor Durkan
    orcid: 0000-0001-9333-7777
-   affiliation: "e, 3"
+   affiliation: "0, 2"
  - name: Pedro J. Gonçalves
    orcid: 0000-0002-6987-4836
-   affiliation: "1, 4"
+   affiliation: "1, 3"
  - name: David S. Greenberg
    orcid: 0000-0002-8515-0459
-   affiliation: "1, 5"
+   affiliation: "1, 4"
  - name: Jakob H. Macke
    orcid: 0000-0001-5154-8912
-   affiliation: "1, 2, 6"
+   affiliation: "1, 5, 6"
 affiliations:
  - name: Equally contributing authors
-   index: e
+   index: 0
  - name: Computational Neuroengineering, Department of Electrical and Computer Engineering, Technical University of Munich
    index: 1
- - name: Machine Learning in Science, University of Tübingen
-   index: 2
  - name: School of Informatics, University of Edinburgh
-   index: 3
+   index: 2
  - name: Neural Systems Analysis, Center of Advanced European Studies and Research (caesar), Bonn 
-   index: 4
+   index: 3
  - name:  Model-Driven Machine Learning, Centre for Materials and Coastal Research, Helmholtz-Zentrum Geesthacht
+   index: 4
+ - name: Machine Learning in Science, University of Tübingen
    index: 5
  - name: Empirical Inference, Max Planck Institute for Intelligent Systems, Tübingen
    index: 6
