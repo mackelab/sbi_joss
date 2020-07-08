@@ -90,6 +90,6 @@ This work has been supported by the German Federal Ministry of Education and Res
 
 Conor Durkan was supported by the EPSRC Centre for Doctoral Training in Data Science, funded by the UK Engineering and Physical Sciences Research Council (grant EP/L016427/1) and the University of Edinburgh.
 
-We are grateful to Artur Bekasov, George Papamakarios and Iain Murray for making `nflows` [@nflows-repo] available, a package for normalizing flows-based density estimation which `sbi` leverages extensively.
+We are grateful to Artur Bekasov, George Papamakarios and Iain Murray for making `nflows` [@nflows-repo] available, a package for normalizing flow-based density estimation which `sbi` leverages extensively.
 
 # References
