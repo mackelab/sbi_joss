@@ -54,7 +54,7 @@ bibliography: paper.bib
 
 Scientists and engineers employ stochastic numerical simulators to model empirically observed phenomena. In contrast to purely statistical models, simulators use domain-relevant, interpretable parameters. A common challenge is to tune such parameters so that the outputs of the simulator are consistent with the empirical observations. Simulation-based inference (SBI) is an approach to infer the unknown parameters of the simulator so that they a) are compatible with prior knowledge and b) match empirical observations. Importantly, this process does not only seek to find a single data-compatible parameter-setting, but rather can assign high probability to a whole region of parameter combinations that may all explain a given observation. Therefore, it naturally quantifies the uncertainty associated with parameter identification. In Bayesian terms, SBI seeks to infer a posterior distribution over the parameters of interest from a prior distribution even when explicit likelihood evaluations are unavailable, which is often the case for complex simulators.
 
-We present `sbi`, a PyTorch-based package that implements SBI algorithms based on neural networks. `sbi` facilitates inference on black-box simulators for practising scientists and engineers by providing a unified interface to state-of-the-art algorithms together with documentation and tutorials.
+We present [`sbi`](http://www.mackelab.org/sbi/), a PyTorch-based package that implements SBI algorithms based on neural networks. `sbi` facilitates inference on black-box simulators for practising scientists and engineers by providing a unified interface to state-of-the-art algorithms together with documentation and tutorials.
 
 # Motivation
 
