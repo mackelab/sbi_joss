@@ -9,19 +9,19 @@ tags:
 authors: 
  - name: Alvaro Tejero-Cantero
    orcid: 0000-0002-8768-4227
-   affiliation: "0, 1"
+   affiliation: "e, 1"
  - name: Jan Boelts
    orcid: 0000-0003-4979-7092
-   affiliation: "0, 1"
+   affiliation: "e, 1"
  - name: Michael Deistler
    orcid: 0000-0002-3573-0404
-   affiliation: "0, 1"
+   affiliation: "e, 1"
  - name: Jan-Matthis Lueckmann
    orcid: 0000-0003-4320-4663
-   affiliation: "0, 1"
+   affiliation: "e, 1"
  - name: Conor Durkan
    orcid: 0000-0001-9333-7777
-   affiliation: "0, 2"
+   affiliation: "e, 2"
  - name: Pedro J. Gonçalves
    orcid: 0000-0002-6987-4836
    affiliation: "1, 3"
@@ -33,7 +33,7 @@ authors:
    affiliation: "1, 5, 6"
 affiliations:
  - name: Equally contributing authors
-   index: 0
+   index: e
  - name: Computational Neuroengineering, Department of Electrical and Computer Engineering, Technical University of Munich
    index: 1
  - name: School of Informatics, University of Edinburgh
